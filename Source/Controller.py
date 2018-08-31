@@ -28,16 +28,13 @@ class Controller:
             password = input("Password: ")
             name = input ("Ho va ten: ")
             idcity = input("Ma so thanh pho: \n *Luu y ma so thanh pho la so nguyen tu 1 den 10 !\n")
-            #int(idcity, 36)
-            #if (idcity < 10 or idcity > 0):
+           
             sex = input("Gioi tinh: ")
             birthday = input("Ngay sinh: ")
 
             model.SignUp(username, password, name, idcity, sex, birthday)  
             print("Dang ki thanh cong !")
-            #else:
-            #    print("Ma so thanh pho khong hop le")
-            #    return self.SignUp()
+         
 
 
     def SignIn(self):
@@ -47,6 +44,7 @@ class Controller:
         password = input("Password: ")
         self.flag = model.SignIn(self.username, password)
         if ( self.flag != None ):
+            os.system('cls')
             print("\nDang nhap thanh cong !")
         else:
             print("\nDang nhap that bai, yeu cau kiem tra lai tai khoan va mat khau !")

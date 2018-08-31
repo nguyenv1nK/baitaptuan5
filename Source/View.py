@@ -17,20 +17,25 @@ class View():
         chose = input("\nMoi nhap lua chon: ")
 
         if(chose == "1"):
+            os.system('cls')
             return self.MenuMess()
 
         elif(chose == "2"):
+            os.system('cls')
             return self.MenuFriend()
 
         elif(chose == "3"):
+            os.system('cls')
             return self.MenuBlock()
 
         elif(chose == "4"):
+            os.system('cls')
             controller.SignOut()
             self.username = None
             return self.Menu()
 
         else:
+            os.system('cls')
             print("\nKhong co lua chon nay, yeu cau nhap lai !")
             return self.MainMenu()
        
@@ -46,12 +51,15 @@ class View():
         chose = input("Moi nhap lua chon: ")
         
         if(chose == "1"):
+            os.system('cls')
             controller.SignIn()
 
-        elif(chose == "2"): 
+        elif(chose == "2"):
+            os.system('cls')
             controller.SignUp()
 
         else:
+            os.system('cls')
             print("\nKhong co lua chon nay, yeu cau nhap lai !")
 
         
@@ -76,12 +84,16 @@ class View():
         chose = input("\nMoi nhap lua chon: ")
         
         if(chose =="1"):
+            os.system('cls')
             controller.SendMess(self.username)
         elif(chose == "2"):
+            os.system('cls')
             controller.ListMessSend(self.username)
         elif(chose == "3"):
+            os.system('cls')
             controller.ListMessRec(self.username)
         else:
+            os.system('cls')
             print("\nKhong co lua chon nay, yeu cau nhap lai !")
             return self.MenuMess()
         print("Nhan ctrl + B de quay lai Tin nhan")
@@ -89,8 +101,10 @@ class View():
         print("Nhan ctrl + X de thoat chuong trinh")
         input_key = ord(getch()) 
         if(input_key==2):
+            os.system('cls')
             return self.MenuMess()
         if(input_key==13):
+            os.system('cls')
             return self.MainMenu()
         if(input_key==24):
             return 0
@@ -105,13 +119,16 @@ class View():
         chose = input("\nMoi nhap lua chon: ")
 
         if(chose =="1"):
+           os.system('cls')
            controller.AddFriend(self.username) 
 
         elif(chose == "2"):
-           controller.ListFriend(self.username)
+            os.system('cls')
+            controller.ListFriend(self.username)
 
         elif(chose == "3"):
-           controller.RemoveFriend(self.username)
+            os.system('cls')
+            controller.RemoveFriend(self.username)
 
         else:
             print("\nKhong co lua chon nay, yeu cau nhap lai !")
@@ -120,8 +137,10 @@ class View():
         print("Nhan ctrl + M de quay lai Menu")
         print("Nhan ctrl + X de thoat chuong trinh")
         if(input_key==2):
+            os.system('cls')
             return self.MenuFriend()
         if(input_key==13):
+            os.system('cls')
             return self.MainMenu()
         if(input_key==24):
             return 0
@@ -134,8 +153,10 @@ class View():
         chose = input("\nMoi nhap lua chon: ")
 
         if(chose =="1"):
+            os.system('cls')
             controller.Block(self.username)
         elif(chose =="2"):
+            os.system('cls')
             controller.RemoveBlock(self.username)
         else:
             print("\nKhong co lua chon nay, yeu cau nhap lai !")
@@ -144,8 +165,10 @@ class View():
         print("Nhan ctrl + M de quay lai Menu")
         print("Nhan ctrl + X de thoat chuong trinh")
         if(input_key==2):
+            os.system('cls')
             return self.MenuBlock()
         if(input_key==13):
+            os.system('cls')
             return self.MainMenu()
         if(input_key==24):
             return 0
